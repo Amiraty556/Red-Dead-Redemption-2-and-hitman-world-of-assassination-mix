@@ -1,0 +1,1132 @@
+[
+ {
+  "name": "PLAY_SOUND_FROM_ENTITY",
+  "namespace": "AUDIO",
+  "hash": "0x6FB1DA3CA9DA7D90",
+  "returnType": "void",
+  "params": [
+   "const char* audioName",
+   "Entity entity",
+   "const char* audioRef",
+   "BOOL isNetwork",
+   "Any p4",
+   "Any p5"
+  ],
+  "usedBy": "sound_distract",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_STOP_SOUND_WITH_ID",
+  "namespace": "AUDIO",
+  "hash": "0x3210BCB36AF7621B",
+  "returnType": "void",
+  "params": [
+   "int soundId"
+  ],
+  "usedBy": "sound_distract",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_STOP_SOUND_WITH_NAME",
+  "namespace": "AUDIO",
+  "hash": "0x0F2A2175734926D8",
+  "returnType": "void",
+  "params": [
+   "const char* audioName",
+   "const char* audioRef"
+  ],
+  "usedBy": "sound_distract",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "DELETE_ENTITY",
+  "namespace": "ENTITY",
+  "hash": "0x4CD38C78BD19A497",
+  "returnType": "void",
+  "params": [
+   "Entity* entity"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "DOES_ENTITY_EXIST",
+  "namespace": "ENTITY",
+  "hash": "0xD42BD6EB2E0F1677",
+  "returnType": "BOOL",
+  "params": [
+   "Entity entity"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "FREEZE_ENTITY_POSITION",
+  "namespace": "ENTITY",
+  "hash": "0x7D9EFB7AD6B19754",
+  "returnType": "void",
+  "params": [
+   "Entity entity",
+   "BOOL toggle"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_ENTITY_COORDS",
+  "namespace": "ENTITY",
+  "hash": "0xA86D5F069399F44D",
+  "returnType": "Vector3",
+  "params": [
+   "Entity entity",
+   "BOOL alive",
+   "BOOL realCoords"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_ENTITY_HEADING",
+  "namespace": "ENTITY",
+  "hash": "0xC230DD956E2F5507",
+  "returnType": "float",
+  "params": [
+   "Entity entity"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_ENTITY_HEALTH",
+  "namespace": "ENTITY",
+  "hash": "0x82368787EA73C0F7",
+  "returnType": "int",
+  "params": [
+   "Entity entity"
+  ],
+  "usedBy": "kills",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_ENTITY_DEAD",
+  "namespace": "ENTITY",
+  "hash": "0x7D5B1F88E7504BBA",
+  "returnType": "BOOL",
+  "params": [
+   "Entity entity"
+  ],
+  "usedBy": "contract_flow",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_ENTITY_AS_MISSION_ENTITY",
+  "namespace": "ENTITY",
+  "hash": "0xDC19C288082E586E",
+  "returnType": "void",
+  "params": [
+   "Entity entity",
+   "BOOL scriptHostObject",
+   "BOOL grabFromOtherScript"
+  ],
+  "usedBy": "contract_flow",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_ENTITY_COORDS",
+  "namespace": "ENTITY",
+  "hash": "0x06843DA7060A026B",
+  "returnType": "void",
+  "params": [
+   "Entity entity",
+   "float xPos",
+   "float yPos",
+   "float zPos",
+   "BOOL xAxis",
+   "BOOL yAxis",
+   "BOOL zAxis",
+   "BOOL clearArea"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_ENTITY_HEADING",
+  "namespace": "ENTITY",
+  "hash": "0xCF2B9C0645C4651B",
+  "returnType": "void",
+  "params": [
+   "Entity entity",
+   "float heading"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_ENTITY_HEALTH",
+  "namespace": "ENTITY",
+  "hash": "0xAC2767ED8BDFAB15",
+  "returnType": "void",
+  "params": [
+   "Entity entity",
+   "int healthAmount",
+   "Entity entityKilledBy"
+  ],
+  "usedBy": "kills",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_ENTITY_INVINCIBLE",
+  "namespace": "ENTITY",
+  "hash": "0xA5C38736C426FCB8",
+  "returnType": "void",
+  "params": [
+   "Entity entity",
+   "BOOL toggle"
+  ],
+  "usedBy": "contract_flow",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_ENTITY_VISIBLE",
+  "namespace": "ENTITY",
+  "hash": "0x1794B4FCC84D812F",
+  "returnType": "void",
+  "params": [
+   "Entity entity",
+   "BOOL toggle"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "DISPLAY_HUD",
+  "namespace": "HUD",
+  "hash": "0xD63FE3AF9FB3D53F",
+  "returnType": "void",
+  "params": [
+   "BOOL toggle"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_HUD_SCREEN_POSITION_FROM_WORLD_POSITION",
+  "namespace": "HUD",
+  "hash": "0xB39C81628EF10B42",
+  "returnType": "int",
+  "params": [
+   "float worldX",
+   "float worldY",
+   "float worldZ",
+   "float* screenX",
+   "float* screenY"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_TEXT_CENTRE",
+  "namespace": "HUD",
+  "hash": "0xBE5261939FBECB8C",
+  "returnType": "void",
+  "params": [
+   "BOOL align"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "Device9999/RDR2-Invoker-Entrypoint-Dumper natives.hpp (public)"
+ },
+ {
+  "name": "SET_TEXT_DROPSHADOW",
+  "namespace": "HUD",
+  "hash": "0x1BE39DBAA7263CA5",
+  "returnType": "void",
+  "params": [
+   "int distance",
+   "int r",
+   "int g",
+   "int b",
+   "int a"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "Device9999/RDR2-Invoker-Entrypoint-Dumper natives.hpp (public)"
+ },
+ {
+  "name": "SET_TEXT_SCALE",
+  "namespace": "HUD",
+  "hash": "0x4170B650590B3B00",
+  "returnType": "void",
+  "params": [
+   "float scale",
+   "float size"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "Device9999/RDR2-Invoker-Entrypoint-Dumper natives.hpp (public)"
+ },
+ {
+  "name": "_DISPLAY_TEXT",
+  "namespace": "HUD",
+  "hash": "0xD79334A4BB99BAD1",
+  "returnType": "void",
+  "params": [
+   "const char* text",
+   "float xPos",
+   "float yPos"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_SET_TEXT_COLOR",
+  "namespace": "HUD",
+  "hash": "0x50A41AD966910F03",
+  "returnType": "void",
+  "params": [
+   "int r",
+   "int g",
+   "int b",
+   "int a"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "BLIP_ADD_FOR_ENTITY",
+  "namespace": "MAP",
+  "hash": "0x23F74C2FDA6E7C61",
+  "returnType": "Blip",
+  "params": [
+   "Hash blipHash",
+   "Entity entity"
+  ],
+  "usedBy": "target_marker",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "REMOVE_BLIP",
+  "namespace": "MAP",
+  "hash": "0xF2C3C9DA47AAA54A",
+  "returnType": "void",
+  "params": [
+   "Blip* blip"
+  ],
+  "usedBy": "target_marker",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_BLIP_COORDS",
+  "namespace": "MAP",
+  "hash": "0x4FF674F5E23D49CE",
+  "returnType": "void",
+  "params": [
+   "Blip blip",
+   "float posX",
+   "float posY",
+   "float posZ"
+  ],
+  "usedBy": "target_marker",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_BLIP_SCALE",
+  "namespace": "MAP",
+  "hash": "0xD38744167B2FA257",
+  "returnType": "void",
+  "params": [
+   "Blip blip",
+   "float scale"
+  ],
+  "usedBy": "target_marker",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_BLIP_SPRITE",
+  "namespace": "MAP",
+  "hash": "0x74F74D3207ED525C",
+  "returnType": "void",
+  "params": [
+   "Blip blip",
+   "Hash hash",
+   "BOOL p2"
+  ],
+  "usedBy": "target_marker",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "ARE_STRINGS_EQUAL",
+  "namespace": "MISC",
+  "hash": "0xD3852F22AB713A1F",
+  "returnType": "BOOL",
+  "params": [
+   "const char* string1",
+   "const char* string2"
+  ],
+  "usedBy": "loader_core",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_FRAME_TIME",
+  "namespace": "MISC",
+  "hash": "0x5E72022914CE3C38",
+  "returnType": "float",
+  "params": [],
+  "usedBy": "loader_core",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_GAME_TIMER",
+  "namespace": "MISC",
+  "hash": "0x4F67E8ECA7D3F667",
+  "returnType": "int",
+  "params": [],
+  "usedBy": "loader_core",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_HASH_KEY",
+  "namespace": "MISC",
+  "hash": "0xFD340785ADF8CFB7",
+  "returnType": "Hash",
+  "params": [
+   "const char* string"
+  ],
+  "usedBy": "loader_core",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_STRING_NULL",
+  "namespace": "MISC",
+  "hash": "0x602102324604D96B",
+  "returnType": "BOOL",
+  "params": [
+   "const char* string"
+  ],
+  "usedBy": "loader_core",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "VAR_STRING",
+  "namespace": "MISC",
+  "hash": "0xFA925AC00EB830B9",
+  "returnType": "const char*",
+  "params": [
+   "int flags",
+   "..."
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "CREATE_OBJECT",
+  "namespace": "OBJECT",
+  "hash": "0x509D5878EB39E842",
+  "returnType": "Object",
+  "params": [
+   "Hash modelHash",
+   "float x",
+   "float y",
+   "float z",
+   "BOOL isNetwork",
+   "BOOL bScriptHostObj",
+   "BOOL dynamic",
+   "BOOL p7",
+   "BOOL p8"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "DELETE_OBJECT",
+  "namespace": "OBJECT",
+  "hash": "0x931914268722C263",
+  "returnType": "void",
+  "params": [
+   "Object* object"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_CONTROL_NORMAL",
+  "namespace": "PAD",
+  "hash": "0xEC3C9B8D5327B563",
+  "returnType": "float",
+  "params": [
+   "int control",
+   "Hash action"
+  ],
+  "usedBy": "briefing_menu",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_CONTROL_PRESSED",
+  "namespace": "PAD",
+  "hash": "0xF3A21BCD95725A4A",
+  "returnType": "BOOL",
+  "params": [
+   "int control",
+   "Hash action"
+  ],
+  "usedBy": "briefing_menu",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_DISABLED_CONTROL_PRESSED",
+  "namespace": "PAD",
+  "hash": "0xE2587F8CBBD87B1D",
+  "returnType": "BOOL",
+  "params": [
+   "int control",
+   "Hash action"
+  ],
+  "usedBy": "briefing_menu",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "APPLY_DAMAGE_TO_PED",
+  "namespace": "PED",
+  "hash": "0x697157CED63F18D4",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "int damageAmount",
+   "BOOL damageArmour",
+   "int boneId",
+   "Ped pedKiller"
+  ],
+  "usedBy": "kills",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "CREATE_PED",
+  "namespace": "PED",
+  "hash": "0xD49F9B0955C367DE",
+  "returnType": "Ped",
+  "params": [
+   "Hash modelHash",
+   "float x",
+   "float y",
+   "float z",
+   "float heading",
+   "BOOL isNetwork",
+   "BOOL bScriptHostPed",
+   "BOOL p7",
+   "BOOL p8"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_PED_SOURCE_OF_DEATH",
+  "namespace": "PED",
+  "hash": "0x93C8B64DEB84728C",
+  "returnType": "Entity",
+  "params": [
+   "Ped ped"
+  ],
+  "usedBy": "kills",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_PED_A_PLAYER",
+  "namespace": "PED",
+  "hash": "0x12534C348C6CB68B",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped"
+  ],
+  "usedBy": "kills",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_PED_DEAD_OR_DYING",
+  "namespace": "PED",
+  "hash": "0x3317DEDB88C95038",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped",
+   "BOOL p1"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_PED_IN_ANY_VEHICLE",
+  "namespace": "PED",
+  "hash": "0x997ABD671D25CA0B",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped",
+   "BOOL atGetIn"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_PED_RAGDOLL",
+  "namespace": "PED",
+  "hash": "0x47E4E977581C5B55",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped"
+  ],
+  "usedBy": "kills",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_PED_SHOOTING",
+  "namespace": "PED",
+  "hash": "0x34616828CD07F1A1",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_PED_STOPPED",
+  "namespace": "PED",
+  "hash": "0x530944F6F4B8A214",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_BLOCKING_OF_NON_TEMPORARY_EVENTS",
+  "namespace": "PED",
+  "hash": "0x9F8AA94D6D97DBF4",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "BOOL toggle"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_PED_COMBAT_ATTRIBUTES",
+  "namespace": "PED",
+  "hash": "0x9F7794730795E019",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "int attributeIndex",
+   "BOOL enabled"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_PED_CONFIG_FLAG",
+  "namespace": "PED",
+  "hash": "0x1913FE4CBF41C463",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "int flagId",
+   "BOOL value"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_PED_FLEE_ATTRIBUTES",
+  "namespace": "PED",
+  "hash": "0x70A2D1137C8ED7C9",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "int attributeFlags",
+   "BOOL enable"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_PED_HEARING_RANGE",
+  "namespace": "PED",
+  "hash": "0x33A8F7F7D5F7F33C",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "float value"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_PED_SEEING_RANGE",
+  "namespace": "PED",
+  "hash": "0xF29CF591C4BF6CEE",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "float value"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_PED_TO_RAGDOLL",
+  "namespace": "PED",
+  "hash": "0xAE99FB955581844A",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped",
+   "int timeMin",
+   "int timeMax",
+   "int ragdollType",
+   "BOOL abortIfInjured",
+   "BOOL abortIfDead",
+   "const char* nmTaskMessageParameterName"
+  ],
+  "usedBy": "kills",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_EQUIP_META_PED_OUTFIT",
+  "namespace": "PED",
+  "hash": "0x1902C4CFCC5BE57C",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "Hash hash"
+  ],
+  "usedBy": "disguise",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_HAS_META_PED_OUTFIT_LOADED",
+  "namespace": "PED",
+  "hash": "0x610438375E5D1801",
+  "returnType": "BOOL",
+  "params": [
+   "int requestId"
+  ],
+  "usedBy": "disguise",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_RELEASE_META_PED_OUTFIT_REQUEST",
+  "namespace": "PED",
+  "hash": "0x4592B8B9B0EF5F48",
+  "returnType": "void",
+  "params": [
+   "int requestId"
+  ],
+  "usedBy": "disguise",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_REQUEST_META_PED_OUTFIT",
+  "namespace": "PED",
+  "hash": "0x13154A76CE0CF9AB",
+  "returnType": "int",
+  "params": [
+   "Hash model",
+   "Hash outfit"
+  ],
+  "usedBy": "disguise",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "PLAYER_PED_ID",
+  "namespace": "PLAYER",
+  "hash": "0x096275889B8E0EE0",
+  "returnType": "Ped",
+  "params": [],
+  "usedBy": "contract_flow",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_SHAPE_TEST_RESULT",
+  "namespace": "SHAPETEST",
+  "hash": "0xEDE8AC7C5108FB1D",
+  "returnType": "int",
+  "params": [
+   "ScrHandle shapeTestHandle",
+   "BOOL* hit",
+   "Vector3* endCoords",
+   "Vector3* surfaceNormal",
+   "Entity* entityHit"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "START_SHAPE_TEST_LOS_PROBE",
+  "namespace": "SHAPETEST",
+  "hash": "0x7EE9F5D83DD4F90E",
+  "returnType": "ScrHandle",
+  "params": [
+   "float x1",
+   "float y1",
+   "float z1",
+   "float x2",
+   "float y2",
+   "float z2",
+   "int flags",
+   "Entity entity",
+   "int p8"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "HAS_MODEL_LOADED",
+  "namespace": "STREAMING",
+  "hash": "0x1283B8B89DD5D1B6",
+  "returnType": "BOOL",
+  "params": [
+   "Hash model"
+  ],
+  "usedBy": "contract_flow",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "REQUEST_MODEL",
+  "namespace": "STREAMING",
+  "hash": "0xFA28FE3A6246FC30",
+  "returnType": "void",
+  "params": [
+   "Hash model",
+   "BOOL p1"
+  ],
+  "usedBy": "contract_flow",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_MODEL_AS_NO_LONGER_NEEDED",
+  "namespace": "STREAMING",
+  "hash": "0x4AD96EF928BD4F9A",
+  "returnType": "void",
+  "params": [
+   "Hash model"
+  ],
+  "usedBy": "contract_flow",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "CLEAR_PED_TASKS",
+  "namespace": "TASK",
+  "hash": "0xE1EF3C1216AFF2CD",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "BOOL p1",
+   "BOOL p2"
+  ],
+  "usedBy": "detection_instinct",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "TASK_COMBAT_PED",
+  "namespace": "TASK",
+  "hash": "0xF166E48407BAC484",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "Ped targetPed",
+   "int p2",
+   "int p3"
+  ],
+  "usedBy": "guard_ai",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "TASK_FOLLOW_NAV_MESH_TO_COORD",
+  "namespace": "TASK",
+  "hash": "0x15D3A79D4E44B913",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "float x",
+   "float y",
+   "float z",
+   "float speedMultiplier",
+   "int timeout",
+   "float stoppingRange",
+   "int flags",
+   "float heading"
+  ],
+  "usedBy": "guard_ai",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "TASK_GO_STRAIGHT_TO_COORD",
+  "namespace": "TASK",
+  "hash": "0xD76B57B44F1E6F8B",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "float x",
+   "float y",
+   "float z",
+   "float moveBlendSpeedY",
+   "int timeBeforeTeleport",
+   "float finalHeading",
+   "float targetRadius",
+   "int p8"
+  ],
+  "usedBy": "guard_ai",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "TASK_STAND_STILL",
+  "namespace": "TASK",
+  "hash": "0x919BE13EED931959",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "int time"
+  ],
+  "usedBy": "guard_ai",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "TASK_TURN_PED_TO_FACE_ENTITY",
+  "namespace": "TASK",
+  "hash": "0x5AD23D40115353AC",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "Entity targetEntity",
+   "int duration",
+   "float p3",
+   "float p4",
+   "float p5"
+  ],
+  "usedBy": "guard_ai",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "TASK_VEHICLE_DRIVE_WANDER",
+  "namespace": "TASK",
+  "hash": "0x480142959D337D00",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "Vehicle vehicle",
+   "float speed",
+   "int drivingStyle"
+  ],
+  "usedBy": "guard_ai",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_BG_DISPLAY_TEXT",
+  "namespace": "UIDEBUG",
+  "hash": "0x16794E044C9EFB58",
+  "returnType": "void",
+  "params": [
+   "const char* text",
+   "float x",
+   "float y"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_BG_SET_TEXT_COLOR",
+  "namespace": "UIDEBUG",
+  "hash": "0x16FA5CE47F184F1E",
+  "returnType": "void",
+  "params": [
+   "int red",
+   "int green",
+   "int blue",
+   "int alpha"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_BG_SET_TEXT_SCALE",
+  "namespace": "UIDEBUG",
+  "hash": "0xA1253A3C870B6843",
+  "returnType": "void",
+  "params": [
+   "float scaleX",
+   "float scaleY"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_UILOG_CLEAR_CACHED_OBJECTIVE",
+  "namespace": "UILOG",
+  "hash": "0xDFF0D417277B41F8",
+  "returnType": "void",
+  "params": [],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_UILOG_PRINT_CACHED_OBJECTIVE",
+  "namespace": "UILOG",
+  "hash": "0xE9990552DEC71600",
+  "returnType": "void",
+  "params": [],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "_UILOG_SET_CACHED_OBJECTIVE",
+  "namespace": "UILOG",
+  "hash": "0xFA233F8FE190514C",
+  "returnType": "void",
+  "params": [
+   "const char* p0"
+  ],
+  "usedBy": "hud_overlay",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "CREATE_VEHICLE",
+  "namespace": "VEHICLE",
+  "hash": "0xAF35D0D2583051B0",
+  "returnType": "Vehicle",
+  "params": [
+   "Hash modelHash",
+   "float x",
+   "float y",
+   "float z",
+   "float heading",
+   "BOOL isNetwork",
+   "BOOL bScriptHostVeh",
+   "BOOL bDontAutoCreateDraftAnimals",
+   "BOOL p8"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "DELETE_VEHICLE",
+  "namespace": "VEHICLE",
+  "hash": "0xE20A909D8C4A70F8",
+  "returnType": "void",
+  "params": [
+   "Vehicle* vehicle"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_PED_IN_VEHICLE_SEAT",
+  "namespace": "VEHICLE",
+  "hash": "0xBB40DD2270B65366",
+  "returnType": "Ped",
+  "params": [
+   "Vehicle vehicle",
+   "int seatIndex"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "IS_VEHICLE_DRIVEABLE",
+  "namespace": "VEHICLE",
+  "hash": "0xB86D29B10F627379",
+  "returnType": "BOOL",
+  "params": [
+   "Vehicle vehicle",
+   "BOOL p1",
+   "BOOL p2"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GET_AMMO_IN_PED_WEAPON",
+  "namespace": "WEAPON",
+  "hash": "0x015A522136D7F951",
+  "returnType": "int",
+  "params": [
+   "Ped ped",
+   "Hash weaponHash"
+  ],
+  "usedBy": "weapons",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "GIVE_WEAPON_TO_PED",
+  "namespace": "WEAPON",
+  "hash": "0x5E3BDDBCB83F3D84",
+  "returnType": "Hash",
+  "params": [
+   "Ped ped",
+   "Hash weaponHash",
+   "int ammoCount",
+   "BOOL bForceInHand",
+   "BOOL bForceInHolster",
+   "int attachPoint",
+   "BOOL bAllowMultipleCopies",
+   "float p7",
+   "float p8",
+   "Hash addReason",
+   "BOOL bIgnoreUnlocks",
+   "float permanentDegradation",
+   "BOOL p12"
+  ],
+  "usedBy": "weapons",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "HAS_PED_GOT_WEAPON",
+  "namespace": "WEAPON",
+  "hash": "0x8DECB02F88F428BC",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped",
+   "Hash weaponHash",
+   "int p2",
+   "BOOL onlyCheckPlayerInventory"
+  ],
+  "usedBy": "weapons",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_AMMO_IN_CLIP",
+  "namespace": "WEAPON",
+  "hash": "0xDCD2A934D65CB497",
+  "returnType": "BOOL",
+  "params": [
+   "Ped ped",
+   "Hash weaponHash",
+   "int ammo"
+  ],
+  "usedBy": "weapons",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_CURRENT_PED_WEAPON",
+  "namespace": "WEAPON",
+  "hash": "0xADF692B254977C0C",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "Hash weaponHash",
+   "BOOL equipNow",
+   "int attachPoint",
+   "BOOL p4",
+   "BOOL p5"
+  ],
+  "usedBy": "weapons",
+  "source": "alloc8or/rdr3-nativedb-data"
+ },
+ {
+  "name": "SET_PED_DROPS_WEAPONS_WHEN_DEAD",
+  "namespace": "WEAPON",
+  "hash": "0x476AE72C1D19D1A8",
+  "returnType": "void",
+  "params": [
+   "Ped ped",
+   "BOOL toggle"
+  ],
+  "usedBy": "spawning",
+  "source": "alloc8or/rdr3-nativedb-data"
+ }
+]

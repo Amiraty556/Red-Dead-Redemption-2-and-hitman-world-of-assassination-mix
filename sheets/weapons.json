@@ -1,0 +1,58 @@
+{
+  "note": "Arthur's kit, granted when a contract is accepted. RDR2 has no suppressors: the 'silenced' revolver works by zeroing contract peds' hearing while a contract is active, so shots do not blow our detection system - the joke is mechanical, not audio. Funny labels are OUR words; the weapons underneath are real RDR2 assets (names verified in decompiled scripts, build 1491.50).",
+  "columns": [
+    "id", "label", "rdr2WeaponName", "ammo", "mechanic", "system", "funnyNote", "verified"
+  ],
+  "rows": [
+    {
+      "id": "w_silenced_revolver",
+      "label": "Silenced Revolver (Very Sneaky)",
+      "rdr2WeaponName": "WEAPON_REVOLVER_CATTLEMAN",
+      "ammo": 60,
+      "mechanic": "silencer: while contract active, contract peds get SET_PED_HEARING_RANGE 0; gunfire does not raise our detection states",
+      "system": "weapons",
+      "funnyNote": "It is not quiet. It is polite.",
+      "verified": false
+    },
+    {
+      "id": "w_revolver",
+      "label": "Standard Issue Revolver",
+      "rdr2WeaponName": "WEAPON_REVOLVER_CATTLEMAN",
+      "ammo": 60,
+      "mechanic": "given to spawned guards (targets unarmed unless behavior says otherwise)",
+      "system": "weapons",
+      "funnyNote": "Guards get the same gun. They just aim worse.",
+      "verified": false
+    },
+    {
+      "id": "w_fiber_wire",
+      "label": "Fiber Wire (Horsehair)",
+      "rdr2WeaponName": "WEAPON_MELEE_KNIFE",
+      "ammo": -1,
+      "mechanic": "back-takedown: when behind a target within 1.8m and unseen, kills silently via APPLY_DAMAGE_TO_PED without combat state",
+      "system": "kills",
+      "funnyNote": "Arthur braided it himself. It is mostly rein.",
+      "verified": false
+    },
+    {
+      "id": "w_throwing_knives",
+      "label": "Ruby-Tipped Throwing Knives",
+      "rdr2WeaponName": "WEAPON_THROWN_THROWING_KNIVES",
+      "ammo": 10,
+      "mechanic": "vanilla throwable; counted as silent elimination for scoring if it kills a target un witnessed",
+      "system": "weapons",
+      "funnyNote": "Ruby tips. Because subtlety is a spectrum.",
+      "verified": false
+    },
+    {
+      "id": "w_rubber_duck",
+      "label": "Rubber Duck (Do Not Feed)",
+      "rdr2WeaponName": "WEAPON_THROWN_DYNAMITE",
+      "ammo": 3,
+      "mechanic": "vanilla thrown dynamite; loud, lethal, ruins Silent Assassin - kept for laughs",
+      "system": "weapons",
+      "funnyNote": "Diana explicitly forbade this duck. Arthur brought three.",
+      "verified": false
+    }
+  ]
+}

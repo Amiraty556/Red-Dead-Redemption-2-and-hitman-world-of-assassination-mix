@@ -1,0 +1,42 @@
+{
+  "note": "The funny gadgets. Each wires a real RDR2 asset to a HITMAN-style effect. Keys are RDR2 control ids used via IS_CONTROL_PRESSED (exact control numbers are constants in the code's controls header, tested in game).",
+  "columns": ["id", "label", "kind", "assetName", "weaponRef", "key", "effect", "systems", "funnyNote", "verified"],
+  "rows": [
+    {
+      "id": "gad_coin",
+      "label": "Coin (Stamped 1899)",
+      "kind": "object",
+      "assetName": "p_coin01x",
+      "weaponRef": null,
+      "key": "C",
+      "effect": "toss coin ahead, it clinks, guards within 25m walk to investigate (guard_ai coin_investigate), 10s then gone",
+      "systems": ["sound_distract", "guard_ai"],
+      "funnyNote": "HITMAN's coin. In the frontier it buys nothing and fools everyone.",
+      "verified": false
+    },
+    {
+      "id": "gad_fiber_wire",
+      "label": "Fiber Wire (Horsehair)",
+      "kind": "weapon",
+      "assetName": "WEAPON_MELEE_KNIFE",
+      "weaponRef": "w_fiber_wire",
+      "key": "melee",
+      "effect": "instant silent takedown from behind (kills system), no combat raised",
+      "systems": ["kills"],
+      "funnyNote": "Diana calls it 'the wire'. Arthur calls it 'the rein'.",
+      "verified": false
+    },
+    {
+      "id": "gad_rubber_duck",
+      "label": "Rubber Duck (Do Not Feed)",
+      "kind": "weapon",
+      "assetName": "WEAPON_THROWN_DYNAMITE",
+      "weaponRef": "w_rubber_duck",
+      "key": "throw",
+      "effect": "thrown dynamite: loud lethal comedy, instantly forfeits Silent Assassin (scoring usedLoudWeapons)",
+      "systems": ["weapons", "scoring"],
+      "funnyNote": "Diana explicitly forbade this duck. Arthur brought three.",
+      "verified": false
+    }
+  ]
+}

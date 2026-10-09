@@ -1,0 +1,66 @@
+{
+  "note": "The REAL HITMAN content the mod reads from the player's own install while it runs. Nothing here is ever shipped in our upload. ioiHash = md5(ioiPath)[1:8] big-endian; all three were verified to match the actual files extracted from this PC's install (presentInInstall verified true on 2026-10-08). Discovery: Steam libraryfolders.vdf -> app 1659040 -> HITMAN 3 folder.",
+  "columns": ["id", "purpose", "ioiPath", "ioiHash", "resourceType", "usedBy", "presentInInstall", "fallbackIfMissing"],
+  "rows": [
+    {
+      "id": "hc_rat",
+      "purpose": "contract Rat (Chongqing) - codename, location key, objectives with literal target names 'Hush', 'The Archivist'",
+      "ioiPath": "[assembly:/_pro/online/default/contracts/seed/missions/wet__rat__ea233825-9d14-436c-a97b-bec054c89b66.contract.json]([assembly:/_pro/online/default/offlineconfig/config.unlockables].pc_unlockables).pc_json",
+      "ioiHash": "0x0092633EE2D15990",
+      "resourceType": "JSON",
+      "usedBy": ["hitman_reader", "briefing_menu", "scoring"],
+      "presentInInstall": true,
+      "fallbackIfMissing": "use contracts.json fallbackDisplayName values and show 'contract file unavailable' on the dossier"
+    },
+    {
+      "id": "hc_bulldog",
+      "purpose": "contract Bulldog (Dartmoor) - codename, objectives 'Eliminate Alexa Carlisle', 'Find the Case File'",
+      "ioiPath": "[assembly:/_pro/online/default/contracts/seed/missions/ancestral_bulldog_755984a8-fb0b-4673-8637-95cfe7d34e0f.contract.json]([assembly:/_pro/online/default/offlineconfig/config.unlockables].pc_unlockables).pc_json",
+      "ioiHash": "0x00F1C98E21AC5D76",
+      "resourceType": "JSON",
+      "usedBy": ["hitman_reader", "briefing_menu", "scoring"],
+      "presentInInstall": true,
+      "fallbackIfMissing": "use contracts.json fallbackDisplayName values and show 'contract file unavailable' on the dossier"
+    },
+    {
+      "id": "hc_llama",
+      "purpose": "contract Llama (Mendoza) - codename, objectives 'Eliminate The Winemaker', 'Eliminate The Herald', 'Find Diana Burnwood'",
+      "ioiPath": "[assembly:/_pro/online/default/contracts/seed/missions/elegant_llama_d42f850f-ca55-4fc9-9766-8c6a2b5c3129.contract.json]([assembly:/_pro/online/default/offlineconfig/config.unlockables].pc_unlockables).pc_json",
+      "ioiHash": "0x00C27E02CD7CD328",
+      "resourceType": "JSON",
+      "usedBy": ["hitman_reader", "briefing_menu", "scoring"],
+      "presentInInstall": true,
+      "fallbackIfMissing": "use contracts.json fallbackDisplayName values and show 'contract file unavailable' on the dossier"
+    },
+    {
+      "id": "hc_steam_discovery",
+      "purpose": "find the HITMAN install folder itself (Melty does not pass it: role secondary)",
+      "ioiPath": "C:\\Program Files (x86)\\Steam\\steamapps\\libraryfolders.vdf then every library's steamapps\\common\\HITMAN 3",
+      "ioiHash": "n/a",
+      "resourceType": "vdf-text",
+      "usedBy": ["hitman_reader"],
+      "presentInInstall": true,
+      "fallbackIfMissing": "try registry-free guesses: D:\\SteamLibrary\\steamapps\\common\\HITMAN 3, then show missing_notice if none opens"
+    },
+    {
+      "id": "hc_missing_notice",
+      "purpose": "in-game message when HITMAN is not installed (required by Melty's rule for secondary games)",
+      "ioiPath": "n/a - our own English text drawn by briefing_menu",
+      "ioiHash": "n/a",
+      "resourceType": "text",
+      "usedBy": ["briefing_menu"],
+      "presentInInstall": true,
+      "fallbackIfMissing": "n/a - this row IS the fallback"
+    },
+    {
+      "id": "hc_tile_images",
+      "purpose": "dossier target art (TileImage paths inside the three contract JSONs, e.g. images/contracts/bulldog/bulldog_tile.jpg -> .pc_gfx resource)",
+      "ioiPath": "[assembly:/_pro/online/default/cloudstorage/resources/<TileImage>].pc_gfx",
+      "ioiHash": "computed at runtime from each TileImage",
+      "resourceType": "GFXI",
+      "usedBy": ["briefing_menu"],
+      "presentInInstall": false,
+      "fallbackIfMissing": "v1 dossier is text-only; images enabled later (row stays presentInInstall=false and preflight strict mode allows it as documented v2)"
+    }
+  ]
+}

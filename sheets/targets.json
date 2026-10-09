@@ -1,0 +1,106 @@
+{
+  "note": "Every ped the mashup spawns. nameFromContract is REAL HITMAN text parsed from the contract JSON's objective _comment at runtime (not hard-coded names). Models are RDR2 strings verified present in decompiled scripts (build 1491.50); spawn behavior is verified in the in-game test pass.",
+  "columns": [
+    "id", "contractRef", "role", "nameFromContract", "fallbackDisplayName",
+    "modelCandidate", "spawnOffset", "spawnHeadingOffset", "weaponRef",
+    "health", "seeingRange", "hearingRange", "behavior", "blip", "protected", "verified"
+  ],
+  "rows": [
+    {
+      "id": "tgt_rat_hush", "contractRef": "contract_rat", "role": "target",
+      "nameFromContract": "Eliminate Hush", "fallbackDisplayName": "Hush",
+      "modelCandidate": "A_M_M_MIDDLESDTOWNFOLK_01", "spawnOffset": [12.0, 8.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": null, "health": 200,
+      "seeingRange": 30.0, "hearingRange": 60.0,
+      "behavior": "wander_small_loop", "blip": true, "protected": false, "verified": false
+    },
+    {
+      "id": "tgt_rat_archivist", "contractRef": "contract_rat", "role": "target",
+      "nameFromContract": "Eliminate The Archivist", "fallbackDisplayName": "The Archivist",
+      "modelCandidate": "A_F_M_LOWERSDTOWNFOLK_01", "spawnOffset": [-8.0, 15.0, 0.0],
+      "spawnHeadingOffset": 180.0, "weaponRef": null, "health": 200,
+      "seeingRange": 30.0, "hearingRange": 60.0,
+      "behavior": "stand_idle", "blip": true, "protected": false, "verified": false
+    },
+    {
+      "id": "grd_rat_a", "contractRef": "contract_rat", "role": "guard",
+      "nameFromContract": null, "fallbackDisplayName": "Suspicious Character",
+      "modelCandidate": "A_M_M_MIDDLESDTOWNFOLK_02", "spawnOffset": [14.0, 6.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": "w_revolver", "health": 300,
+      "seeingRange": 45.0, "hearingRange": 70.0,
+      "behavior": "escort_target", "blip": false, "protected": false, "verified": false
+    },
+    {
+      "id": "grd_rat_b", "contractRef": "contract_rat", "role": "guard",
+      "nameFromContract": null, "fallbackDisplayName": "Suspicious Character",
+      "modelCandidate": "A_M_M_MIDDLESDTOWNFOLK_03", "spawnOffset": [10.0, 10.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": "w_revolver", "health": 300,
+      "seeingRange": 45.0, "hearingRange": 70.0,
+      "behavior": "escort_target", "blip": false, "protected": false, "verified": false
+    },
+    {
+      "id": "tgt_bd_carlisle", "contractRef": "contract_bulldog", "role": "target",
+      "nameFromContract": "Eliminate Alexa Carlisle", "fallbackDisplayName": "Alexa Carlisle",
+      "modelCandidate": "A_F_M_GAMHIGHSOCIETY_01", "spawnOffset": [6.0, 10.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": null, "health": 200,
+      "seeingRange": 25.0, "hearingRange": 55.0,
+      "behavior": "walk_between_points", "blip": true, "protected": false, "verified": false
+    },
+    {
+      "id": "grd_bd_a", "contractRef": "contract_bulldog", "role": "guard",
+      "nameFromContract": null, "fallbackDisplayName": "Estate Guard",
+      "modelCandidate": "A_M_M_RHDTOWNFOLK_01", "spawnOffset": [8.0, 6.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": "w_revolver", "health": 300,
+      "seeingRange": 50.0, "hearingRange": 70.0,
+      "behavior": "patrol_perimeter", "blip": false, "protected": false, "verified": false
+    },
+    {
+      "id": "grd_bd_b", "contractRef": "contract_bulldog", "role": "guard",
+      "nameFromContract": null, "fallbackDisplayName": "Estate Guard",
+      "modelCandidate": "A_M_M_RHDTOWNFOLK_02", "spawnOffset": [-6.0, 12.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": "w_revolver", "health": 300,
+      "seeingRange": 50.0, "hearingRange": 70.0,
+      "behavior": "patrol_perimeter", "blip": false, "protected": false, "verified": false
+    },
+    {
+      "id": "grd_bd_c", "contractRef": "contract_bulldog", "role": "guard",
+      "nameFromContract": null, "fallbackDisplayName": "Estate Guard",
+      "modelCandidate": "A_M_O_BLWUPPERCLASS_01", "spawnOffset": [4.0, 14.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": "w_revolver", "health": 300,
+      "seeingRange": 50.0, "hearingRange": 70.0,
+      "behavior": "stand_at_door", "blip": false, "protected": false, "verified": false
+    },
+    {
+      "id": "tgt_ll_winemaker", "contractRef": "contract_llama", "role": "target",
+      "nameFromContract": "Eliminate The Winemaker", "fallbackDisplayName": "The Winemaker",
+      "modelCandidate": "A_M_M_GAMHIGHSOCIETY_01", "spawnOffset": [0.0, 0.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": null, "health": 200,
+      "seeingRange": 25.0, "hearingRange": 55.0,
+      "behavior": "ride_vehicle", "blip": true, "protected": false, "verified": false
+    },
+    {
+      "id": "tgt_ll_herald", "contractRef": "contract_llama", "role": "target",
+      "nameFromContract": "Eliminate The Herald", "fallbackDisplayName": "The Herald",
+      "modelCandidate": "A_M_M_RANCHER_01", "spawnOffset": [0.0, 0.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": "w_revolver", "health": 250,
+      "seeingRange": 35.0, "hearingRange": 60.0,
+      "behavior": "ride_vehicle", "blip": true, "protected": false, "verified": false
+    },
+    {
+      "id": "grd_ll_driver", "contractRef": "contract_llama", "role": "driver",
+      "nameFromContract": null, "fallbackDisplayName": "Carriage Driver",
+      "modelCandidate": "A_M_M_RHDTOWNFOLK_01", "spawnOffset": [0.0, 0.0, 0.0],
+      "spawnHeadingOffset": 0.0, "weaponRef": null, "health": 200,
+      "seeingRange": 30.0, "hearingRange": 60.0,
+      "behavior": "drive_vehicle", "blip": false, "protected": false, "verified": false
+    },
+    {
+      "id": "npc_ll_diana", "contractRef": "contract_llama", "role": "protected",
+      "nameFromContract": "Find Diana Burnwood", "fallbackDisplayName": "Diana Burnwood",
+      "modelCandidate": "A_F_M_GAMHIGHSOCIETY_01", "spawnOffset": [10.0, 4.0, 0.0],
+      "spawnHeadingOffset": 90.0, "weaponRef": null, "health": 200,
+      "seeingRange": 20.0, "hearingRange": 50.0,
+      "behavior": "stand_idle", "blip": false, "protected": true, "verified": false
+    }
+  ]
+}

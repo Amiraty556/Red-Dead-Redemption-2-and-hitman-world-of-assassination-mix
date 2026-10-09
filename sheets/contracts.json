@@ -1,0 +1,55 @@
+{
+  "note": "The three contracts. Each stages a REAL HITMAN contract (read from the player's install) as a mission in RDR2 story mode. Coordinates are candidates: the in-game test pass sets verified=true after reading them live.",
+  "columns": [
+    "id", "hitmanCodename", "hitmanContractRef", "hitmanLocationKey",
+    "stagingPlace", "spawnCoords", "spawnHeading", "timeOfDay",
+    "difficulty", "targetRefs", "vehicleRef", "briefLine", "verified"
+  ],
+  "rows": [
+    {
+      "id": "contract_rat",
+      "hitmanCodename": "Rat",
+      "hitmanContractRef": "hc_rat",
+      "hitmanLocationKey": "LOCATION_WET_RAT",
+      "stagingPlace": "Saint Denis back streets (night stand-in for Chongqing)",
+      "spawnCoords": [2635.0, -1215.0, 49.0],
+      "spawnHeading": 90.0,
+      "timeOfDay": "night",
+      "difficulty": 1,
+      "targetRefs": ["tgt_rat_hush", "tgt_rat_archivist", "grd_rat_a", "grd_rat_b"],
+      "vehicleRef": null,
+      "briefLine": "Two targets, one rain-slick street. Diana says: no witnesses, no noise, no charm offensives.",
+      "verified": false
+    },
+    {
+      "id": "contract_bulldog",
+      "hitmanCodename": "Bulldog",
+      "hitmanContractRef": "hc_bulldog",
+      "hitmanLocationKey": "LOCATION_ANCESTRAL_BULLDOG",
+      "stagingPlace": "Braithwaite Manor (stand-in for Thornbridge Manor)",
+      "spawnCoords": [1090.0, -995.0, 55.0],
+      "spawnHeading": 20.0,
+      "timeOfDay": "day",
+      "difficulty": 2,
+      "targetRefs": ["tgt_bd_carlisle", "grd_bd_a", "grd_bd_b", "grd_bd_c"],
+      "vehicleRef": null,
+      "briefLine": "An estate, a lady of the house, and three men who will not ask questions politely. The Case File is secondary. Alexa Carlisle is not.",
+      "verified": false
+    },
+    {
+      "id": "contract_llama",
+      "hitmanCodename": "Llama",
+      "hitmanContractRef": "hc_llama",
+      "hitmanLocationKey": "LOCATION_ELEGANT_LLAMA",
+      "stagingPlace": "The road south of Rhodes (stand-in for Mendoza's vineyard run)",
+      "spawnCoords": [1360.0, -900.0, 55.0],
+      "spawnHeading": 300.0,
+      "timeOfDay": "day",
+      "difficulty": 3,
+      "targetRefs": ["tgt_ll_winemaker", "tgt_ll_herald", "grd_ll_driver", "npc_ll_diana"],
+      "vehicleRef": "veh_ll_carriage",
+      "briefLine": "A carriage, two targets, and a handler who insists she can find herself. Do not eliminate Diana Burnwood. Ever.",
+      "verified": false
+    }
+  ]
+}

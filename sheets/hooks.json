@@ -1,0 +1,56 @@
+{
+  "note": "Pattern scans that wire our ASI into RDR2 without ScriptHookRDR2 (which Melty cannot auto-install). Patterns 1-4 are from emcifuntik/rdr2scripthook (MIT, derived from Tuxick 2019) targeting build 1.0.1491.50; fallback tick from Device9999/RDR2-Invoker-Entrypoint-Dumper (public). status is set to verified by the in-game test pass.",
+  "columns": ["id", "purpose", "pattern", "resultOffset", "howUsed", "fallback", "source", "status"],
+  "rows": [
+    {
+      "id": "hk_get_native_address",
+      "purpose": "the game's own native resolver: uint64_t f(uint64_t hash)",
+      "pattern": "48 8B 15 ? ? ? ? 4C 8B C9 49 F7 D1",
+      "resultOffset": 0,
+      "howUsed": "call it to resolve any native hash to a handler address at runtime (build-independent)",
+      "fallback": "none: without it the mod logs NATIVE_RESOLVER_MISSING and disables itself (game still runs)",
+      "source": "rdr2scripthook (MIT) CScriptManager::Init",
+      "status": "unverified"
+    },
+    {
+      "id": "hk_tick",
+      "purpose": "main-thread script-update detour: our per-frame update runs here, in script context",
+      "pattern": "48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 41 56 41 57 48 83 EC ? 45 33 F6 BD ? ? ? ?",
+      "resultOffset": 0,
+      "howUsed": "MinHook detour; call original then run contract_flow.update()",
+      "fallback": "hk_tick_fallback (is_dlc_present hook) if this signature is not found",
+      "source": "rdr2scripthook (MIT) UpdateSingleScripts",
+      "status": "unverified"
+    },
+    {
+      "id": "hk_tick_fallback",
+      "purpose": "alternate per-frame hook if primary tick signature misses on this build",
+      "pattern": "81 FA 00 00 00 00 75 0B 8A",
+      "resultOffset": -30,
+      "howUsed": "function starts at match-0x1E; MinHook detour as tick",
+      "fallback": "none: log TICK_NOT_FOUND, mod idles (game runs, mashup inert)",
+      "source": "Device9999/RDR2-Invoker-Entrypoint-Dumper (public, 2019)",
+      "status": "unverified"
+    },
+    {
+      "id": "hk_current_script_thread",
+      "purpose": "pointer to the active rage::scrThread* global",
+      "pattern": "48 39 1D ? ? ? ? 75 ? 48 8D 05 ? ? ? ?",
+      "resultOffset": 3,
+      "howUsed": "read/set active thread around native calls that care about script context",
+      "fallback": "call natives without thread switch (most gameplay natives do not need it)",
+      "source": "rdr2scripthook (MIT) currentScriptThreadPat",
+      "status": "unverified"
+    },
+    {
+      "id": "hk_script_handler_mgr",
+      "purpose": "rage::scriptHandlerMgr instance address",
+      "pattern": "48 8D 0D ? ? ? ? E8 ? ? ? ? 84 C0 75 ? 8B 8B ? ? ? ?",
+      "resultOffset": 0,
+      "howUsed": "only needed if we register a custom script thread (v2 path); resolved but unused in v1",
+      "fallback": "unused in v1",
+      "source": "rdr2scripthook (MIT) scriptHandlerManagerPat",
+      "status": "unverified"
+    }
+  ]
+}
