@@ -8,7 +8,7 @@ OUT="$ROOT/build"
 mkdir -p "$OUT"
 
 "$CXX" -std=c++17 -O2 -g -shared \
-  -static-libgcc -static-libstdc++ \
+  -static -static-libgcc -static-libstdc++ \
   -I"$MH/include" \
   "$ROOT/src/main.cpp" \
   "$MH/src/hook.c" "$MH/src/trampoline.c" "$MH/src/buffer.c" "$MH/src/hde/hde64.c" \

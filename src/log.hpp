@@ -34,9 +34,20 @@ inline void Log(const char* fmt, ...) {
     SYSTEMTIME t;
     GetLocalTime(&t);
     char line[2300];
-    snprintf(line, sizeof(line), "[%02d:%02d:%02d.%03d] %s\n",
-             t.wHour, t.wMinute, t.wSecond, t.wMilliseconds, buf);
-    if (FILE* f = LogFile()) fputs(line, f);
+    int n = snprintf(line, sizeof(line), "[%02d:%02d:%02d.%03d] %s\n",
+                     t.wHour, t.wMinute, t.wSecond, t.wMilliseconds, buf);
+    if (n <= 0) return;
+    // CreateFile with full sharing: readers (the agent checking progress)
+    // must not be locked out while the game runs. fopen's default sharing
+    // made the log unreadable live.
+    HANDLE h = CreateFileA(LogPath().c_str(), FILE_APPEND_DATA,
+                           FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
+                           nullptr, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
+    if (h != INVALID_HANDLE_VALUE) {
+        DWORD written = 0;
+        WriteFile(h, line, (DWORD)n, &written, nullptr);
+        CloseHandle(h);
+    }
     OutputDebugStringA(line);
 }
 }  // namespace ac

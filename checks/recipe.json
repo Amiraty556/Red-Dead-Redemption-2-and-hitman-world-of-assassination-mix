@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "mode": "installed",
+  "games": [
+    {"slug": "red-dead-redemption-2", "role": "primary"},
+    {"slug": "custom-hitman-world-of-assassination", "role": "secondary"}
+  ],
+  "components": [
+    {"id": "main", "fileName": "ArthurContracts-1.0.0.zip", "label": "Arthur Contracts mod", "kind": "main", "required": true}
+  ],
+  "requirements": [{"kind": "loader", "id": "ultimate-asi-loader"}],
+  "mappings": [{"component": "main", "from": "ArthurContracts.asi", "to": "{game}"}],
+  "launch": {"kind": "game"}
+}
